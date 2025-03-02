@@ -3,11 +3,11 @@
 2. git clone https://github.com/kkv-91/otus_diplom
 3. mkdir -p ./dags ./logs ./plugins ./config ./data ./data_worked
 echo -e "AIRFLOW_UID=$(id -u)" > .env
-4. в .env файл добавить данные для авторизации в KAGGLE API
-   
+4. в .env файл добавить данные для авторизации в KAGGLE API  
    KAGGLE_USERNAME=<your_user_name>
    KAGGLE_KEY=<your_secret_key>
-5.  sudo docker compose up -d
+5.  sudo docker compose up airflow-init -d  
+6.  sudo docker compose up -d
    
 Поднять metabase:
 1. docker pull metabase/metabase:latest
