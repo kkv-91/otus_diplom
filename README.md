@@ -60,12 +60,16 @@ Admin - Variables:
 - chicago/chicago-taxi-rides-2016
 
 2. Подключиться к Metabase, выполнить регистрацию
+   
 http://localhost:3000/
+
 Настроить подключение к Postgres:
-			Conn ID: postgres_analytics_otus
-			Conn Type: Postgres
-			Host: <IP адрес pg_node>
-			Database: postgres
-			Login: postgres
-  			Password: <your_password>
-			Port: 5432
+- Conn ID: postgres_analytics_otus
+- Conn Type: Postgres
+- Host: <IP адрес pg_node>
+- Database: postgres
+- Login: postgres
+- Password: <your_password>
+- Port: 5432
+
+3.   Настроить дашборд
