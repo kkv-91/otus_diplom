@@ -10,8 +10,8 @@ echo -e "AIRFLOW_UID=$(id -u)" > .env
 6.  sudo docker compose up -d
    
 Поднять metabase:
-1. docker pull metabase/metabase:latest
-2. docker run -d -p 3000:3000 --name metabase metabase/metabase
+1. sudo docker pull metabase/metabase:latest
+2. sudo docker run -d -p 3000:3000 --name metabase metabase/metabase
 
 Создать pg-node:
 1. Подключиться к виртуальной машине Linux по SSH - Создание пары ключей SSH: https://cloud.yandex.ru/docs/compute/operations/vm-connect/ssh#creating-ssh-keys
