@@ -44,7 +44,8 @@ ALTER USER postgres WITH PASSWORD 'new_password';
 
 На локальной машине с поднятыми контейнерами
 1. Подключиться к airflow
-http://localhost:8080/home \n
+http://localhost:8080/home
+
 Admin - Connections:
 - Conn ID: postgres_analytics_otus
 - Conn Type: Postgres
@@ -52,7 +53,8 @@ Admin - Connections:
 - Database: postgres
 - Login: postgres
 - Password: <your_password>
-- Port: 5432 \n
+- Port: 5432
+  
 Admin - Variables:
 - kaggle_dataset
 - chicago/chicago-taxi-rides-2016
