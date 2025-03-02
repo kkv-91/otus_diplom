@@ -22,29 +22,25 @@ KAGGLE_KEY=<your_secret_key>
     --zone ru-central1-a \
     --hostname pg-node
 3. sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
-
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-
-sudo apt-get update
-sudo apt-get -y install postgresql
-
-sudo pg_lsclusters 
-4. sudo nano /etc/postgresql/17/main/pg_hba.conf
-
+4. wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+5. sudo apt-get update
+6. sudo apt-get -y install postgresql
+7. sudo pg_lsclusters 
+8. sudo nano /etc/postgresql/17/main/pg_hba.conf
+  
     host    all             all              <IP airflow, metabase>                       md5
 
-sudo nano /etc/postgresql/17/main/postgresql.conf
-    
+9. sudo nano /etc/postgresql/17/main/postgresql.conf
+        
     listen_addresses = '*'
-
-sudo pg_ctlcluster 17 main restart
+   
+10. sudo pg_ctlcluster 17 main restart
 
 5. Задать пароль пользователю postgres
 ALTER USER postgres WITH PASSWORD 'new_password';
 
-
-На локальной машине с поднятыми контейнерами 
-1) Подключиться к airflow
+**На локальной машине с поднятыми контейнерами **
+1. Подключиться к airflow
 http://localhost:8080/home
 - Admin - Connections: Conn ID: postgres_analytics_otus
 			Conn Type: Postgres
@@ -56,7 +52,7 @@ http://localhost:8080/home
 - Admin - Variables: kaggle_dataset
 			chicago/chicago-taxi-rides-2016
 
-2) Подключиться к Metabase, выполнить регистрацию
+2. Подключиться к Metabase, выполнить регистрацию
 http://localhost:3000/
 Настроить подключение к Postgres:
 			Conn ID: postgres_analytics_otus
