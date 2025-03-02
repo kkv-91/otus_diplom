@@ -4,8 +4,10 @@
 3. mkdir -p ./dags ./logs ./plugins ./config ./data ./data_worked
 echo -e "AIRFLOW_UID=$(id -u)" > .env
 4. в .env файл добавить данные для авторизации в KAGGLE API
+   
    KAGGLE_USERNAME=<your_user_name>
    KAGGLE_KEY=<your_secret_key>
+   
 Поднять metabase:
 1. docker pull metabase/metabase:latest
 2. docker run -d -p 3000:3000 --name metabase metabase/metabase
@@ -39,7 +41,7 @@ echo -e "AIRFLOW_UID=$(id -u)" > .env
 5. Задать пароль пользователю postgres
 ALTER USER postgres WITH PASSWORD 'new_password';
 
-**На локальной машине с поднятыми контейнерами **
+На локальной машине с поднятыми контейнерами
 1. Подключиться к airflow
 http://localhost:8080/home
 - Admin - Connections: Conn ID: postgres_analytics_otus
