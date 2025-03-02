@@ -7,6 +7,7 @@ echo -e "AIRFLOW_UID=$(id -u)" > .env
    
    KAGGLE_USERNAME=<your_user_name>
    KAGGLE_KEY=<your_secret_key>
+5.  sudo docker compose up -d
    
 Поднять metabase:
 1. docker pull metabase/metabase:latest
